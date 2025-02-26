@@ -1,14 +1,20 @@
-#include "objet.h"
+#include "arme.h"
+#include "potion.h"
+#include "armure.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    Objet o;
-    Objet o2;
-    cout << "Type de l'objet : " << o.getType() << endl;
-    cout << "Valeur de l'objet : " << o.getValeur() << endl;
-    cout << "Type de l'objet : " << o2.getType() << endl;
-    cout << "Valeur de l'objet : " << o2.getValeur() << endl;
+    Arme a;
+    Potion p;
+    Armure ar;
+
+    cout << "Type de l'objet : " << a.getType() << endl;
+    cout << "Valeur de l'objet : " << a.getBonusAttaque() << endl;
+    cout << "Type de l'objet : " << p.getType() << endl;
+    cout << "Valeur de l'objet : " << p.getPVrendus() << endl;
+    cout << "Type de l'objet : " << ar.getType() << endl;
+    cout << "Valeur de l'objet : " << ar.getBonusDefense() << endl;
     return 0;
 }

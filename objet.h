@@ -11,38 +11,22 @@
 /**
  * \class Objet
  * \brief Classe représentant un objet.
+ * 
+ * La classe Objet est une classe de base abstraite pour tous les objets du jeu.
+ * Elle définit une interface commune pour obtenir le type de l'objet.
  */
 class Objet {
-    private:
-        /**
-         * \brief Type de l'objet : Potion, Arme ou Armure.
-         * \see getType()
-         */
-        std::string type;
-        /**
-         * \brief Valeur de l'objet : Points de vie rendus si Potion, Bonus d'attaque si Arme ou Bonus de défense si Armure.
-         * \see getValeur()
-         */
-        int valeur;
-
-
     public:
         /**
-         * \brief Constructeur de la classe Objet.
+         * \brief Destructeur virtuel par défaut.
          */
-        Objet();
+        virtual ~Objet() = default;
+
         /**
-         * \brief Destructeur de la classe Objet.
+         * \brief Récupère le type de l'objet.
+         * \return Une chaîne de caractères représentant le type de l'objet.
          */
-        ~Objet();
-        /**
-         * \brief Getter pour le type de l'objet.
-         */
-        std::string getType();
-        /**
-         * \brief Getter pour la valeur de l'objet.
-         */
-        int getValeur();
+        virtual std::string getType() const = 0;
 };
 
 #endif
