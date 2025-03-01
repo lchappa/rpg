@@ -22,3 +22,11 @@ Arme::Arme() {
 int Arme::getBonusAttaque() {
     return bonusAttaque;
 }
+
+/**
+ * \brief Modifie le bonus d'attaque de l'arme.
+ * \param bonusAttaque Le nouveau bonus d'attaque de l'arme.
+ */
+void Arme::setBonusAttaque(int bonusAttaque) {
+    this->bonusAttaque = bonusAttaque;
+}

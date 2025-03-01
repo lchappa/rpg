@@ -22,3 +22,11 @@ Armure::Armure() {
 int Armure::getBonusDefense() {
     return bonusDefense;
 }
+
+/**
+ * \brief Modifie le bonus de défense de l'armure.
+ * \param bonusDefense Le nouveau bonus de défense de l'armure.
+ */
+void Armure::setBonusDefense(int bonusDefense) {
+    this->bonusDefense = bonusDefense;
+}

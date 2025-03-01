@@ -21,7 +21,7 @@
  */
 
 class Personnage {
-    private:
+    protected:
         int PVmax;
         int pointsDeVie;
         int attaque;
@@ -39,6 +39,8 @@ class Personnage {
         void equiperArmure(Armure& armure);
         void utiliserPotion(Potion& potion);
         void setPointsDeVie(int pointsDeVie);
+        void setAttaque(int attaque);
+        void setDefense(int defense);
         void setBonusAttaque(int bonusAttaque);
         void setBonusDefense(int bonusDefense);
         int getPointsDeVie();

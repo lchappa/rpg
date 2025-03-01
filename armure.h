@@ -18,6 +18,7 @@ class Armure : public Objet {
     public:
         Armure();
         int getBonusDefense();
+        void setBonusDefense(int bonusDefense);
         std::string getType() const override { return "Armure"; }
 };
 
