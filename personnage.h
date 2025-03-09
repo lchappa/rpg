@@ -34,6 +34,7 @@ class Personnage {
 
     public:
         Personnage();
+        virtual ~Personnage() {}
         void attaquerPersonnage(Personnage& cible);
         void equiperArme(Arme& arme);
         void equiperArmure(Armure& armure);
@@ -43,6 +44,8 @@ class Personnage {
         void setDefense(int defense);
         void setBonusAttaque(int bonusAttaque);
         void setBonusDefense(int bonusDefense);
+        void ajouterObjet(std::unique_ptr<Objet> objet);
+        bool inventairePlein();
         int getPointsDeVie();
         int getAttaque();
         int getDefense();

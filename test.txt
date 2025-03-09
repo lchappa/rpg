@@ -1,0 +1,16 @@
+PV,1@_uhe
+Attaque,8
+BonusAttaque,0
+Defense,15
+BonusDefense,0
+Inventaire
+Slot 0,Emplacement vide
+Slot 1,Emplacement vide
+Slot 2,Emplacement vide
+Slot 3,Emplacement vide
+Slot 4,Emplacement vide
+Slot 5,Emplacement vide
+Slot 6,Emplacement vide
+Slot 7,Emplacement vide
+Slot 8,Emplacement vide
+Slot 9,Emplacement vide

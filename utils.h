@@ -9,6 +9,8 @@
 #include <filesystem>
 #include <fstream>
 #include "personnage.h"
+#include "ennemi.h"
+#include "allie.h"
 #include "arme.h"
 #include "armure.h"
 #include "potion.h"
@@ -155,7 +157,7 @@ inline void loadSaveFile(Personnage& personnage, const std::string& saveFileName
                 std::string value;
                 if (std::getline(iss, value)) {
                     try {
-                        if (key == "PVmax") {
+                        if (key == "PV") {
                             personnage.setPointsDeVie(std::stoi(value));
                         } else if (key == "Attaque") {
                             personnage.setAttaque(std::stoi(value));
@@ -206,6 +208,7 @@ inline void loadSaveFile(Personnage& personnage, const std::string& saveFileName
 
 /**
  * \brief Vérifie s'il existe des fichiers de sauvegarde avec l'extension .txt et demande à l'utilisateur s'il souhaite en charger un ou commencer sans sauvegarde.
+ * \param personnage Référence à un objet Personnage à charger.
  */
 inline void checkForSave(Personnage& personnage) {
     std::vector<std::string> saveFiles;
@@ -241,6 +244,10 @@ inline void checkForSave(Personnage& personnage) {
     }
 }
 
+/**
+ * \brief Exporte les statistiques et l'inventaire d'un personnage dans un fichier de sauvegarde.
+ * \param personnage Référence à un objet Personnage à sauvegarder.
+ */
 inline void exportSaveFile(Personnage& personnage) {
     std::string saveFileName;
     while (true) {
@@ -293,4 +300,183 @@ inline void exportSaveFile(Personnage& personnage) {
     }
 }
 
+/**
+ * \brief Détermine le type de rencontre aléatoire (Ennemi, Allié, Objet).
+ * \return Un entier représentant le type de rencontre.
+ */
+inline int determinerRencontre() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::discrete_distribution<> dist({50, 35, 15});
+
+    return dist(gen);
+}
+
+/**
+ * \brief Gère un combat entre un personnage et un ennemi.
+ * \param personnage Référence à un objet Personnage.
+ * \param ennemi Référence à un objet Ennemi.
+ */
+inline void combat(Personnage& personnage, Ennemi& ennemi) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dist(0, 1);
+
+    auto utiliserPotion = [](Personnage& personnage) {
+        auto& inventaire = personnage.getInventaire();
+        for (auto& objet : inventaire) {
+            if (objet && objet->getType() == "Potion") {
+                personnage.utiliserPotion(*static_cast<Potion*>(objet.get()));
+                objet.reset();
+                std::cout << "Une potion a été utilisée." << std::endl;
+                return true;
+            }
+        }
+        return false;
+    };
+
+    if (dist(gen) == 0) {
+        std::cout << "Vous attaquez !" << std::endl;
+        personnage.attaquerPersonnage(ennemi);
+        if (ennemi.getPointsDeVie() <= 0) {
+            ennemi.setPointsDeVie(0);
+            std::cout << "L'ennemi a été vaincu !" << std::endl;
+        } else {
+            std::cout << "L'ennemi riposte !" << std::endl;
+            ennemi.attaquerPersonnage(personnage);
+            if (personnage.getPointsDeVie() <= 0) {
+                personnage.setPointsDeVie(0);
+                if (!utiliserPotion(personnage)) {
+                    std::cout << "Vous avez été vaincu !" << std::endl;
+                }
+            }
+        }
+    } else {
+        std::cout << "L'ennemi attaque !" << std::endl;
+        ennemi.attaquerPersonnage(personnage);
+        if (personnage.getPointsDeVie() <= 0) {
+            personnage.setPointsDeVie(0);
+            if (!utiliserPotion(personnage)) {
+                std::cout << "Vous avez été vaincu !" << std::endl;
+            }
+        } else {
+            std::cout << "Vous ripostez !" << std::endl;
+            personnage.attaquerPersonnage(ennemi);
+            if (ennemi.getPointsDeVie() <= 0) {
+                ennemi.setPointsDeVie(0);
+                std::cout << "L'ennemi a été vaincu !" << std::endl;
+            }
+        }
+    }
+}
+
+/**
+ * \brief Transfère des objets d'un personnage fournisseur à un personnage receveur.
+ * \param receveur Référence à un objet Personnage qui reçoit les objets.
+ * \param fournisseur Référence à un objet Personnage qui fournit les objets.
+ * 
+ * Si le fournisseur est un allié, le receveur peut récupérer un seul objet.
+ * Si le fournisseur est un ennemi, le receveur peut récupérer plusieurs objets tant que son inventaire n'est pas plein.
+ * 
+ * \note Si l'inventaire du receveur est plein, aucun objet ne peut être récupéré.
+ */
+inline void recupererObjets(Personnage& receveur, Personnage& fournisseur) {
+    bool isAlly = (dynamic_cast<Allie*>(&fournisseur) != nullptr);
+    auto& invReceveur = receveur.getInventaire();
+    auto& invFournisseur = fournisseur.getInventaire();
+
+    auto hasFreeSlot = [&invReceveur]() -> bool {
+        for (auto& slot : invReceveur) {
+            if (!slot) return true;
+        }
+        return false;
+    };
+
+    if (!hasFreeSlot()) {
+        std::cout << "L'inventaire du personnage est plein." << std::endl;
+        return;
+    }
+    std::cout << "Inventaire du receveur:" << std::endl;
+    for (size_t i = 0; i < invReceveur.size(); ++i) {
+        std::cout << "Slot " << i << ": ";
+        if (invReceveur[i]) {
+            std::cout << invReceveur[i]->getType();
+            if (invReceveur[i]->getType() == "Arme") {
+                std::cout << " (" 
+                          << static_cast<Arme*>(invReceveur[i].get())->getBonusAttaque() << ")";
+            } else if (invReceveur[i]->getType() == "Armure") {
+                std::cout << " (" 
+                          << static_cast<Armure*>(invReceveur[i].get())->getBonusDefense() << ")";
+            }
+            std::cout << std::endl;
+        } else {
+            std::cout << "Emplacement vide" << std::endl;
+        }
+    }
+    std::cout << "Inventaire du fournisseur:" << std::endl;
+    for (size_t i = 0; i < invFournisseur.size(); ++i) {
+        std::cout << "Slot " << i << ": ";
+        if (invFournisseur[i]) {
+            std::cout << invFournisseur[i]->getType();
+            if (invFournisseur[i]->getType() == "Arme") {
+                std::cout << " (" 
+                          << static_cast<Arme*>(invFournisseur[i].get())->getBonusAttaque() << ")";
+            } else if (invFournisseur[i]->getType() == "Armure") {
+                std::cout << " (" 
+                          << static_cast<Armure*>(invFournisseur[i].get())->getBonusDefense() << ")";
+            }
+            std::cout << std::endl;
+        } else {
+            std::cout << "Emplacement vide" << std::endl;
+        }
+    }
+
+    if (isAlly) {
+        std::cout << "Vous pouvez récupérer un objet. Entrez l'indice du slot à récupérer (-1 pour annuler) : ";
+        int index;
+        std::cin >> index;
+        if (index < 0 || index >= static_cast<int>(invFournisseur.size())) {
+            std::cout << "Récupération annulée." << std::endl;
+            return;
+        }
+        if (!invFournisseur[index]) {
+            std::cout << "Ce slot est vide." << std::endl;
+            return;
+        }
+        for (auto& slot : invReceveur) {
+            if (!slot) {
+                slot = std::move(invFournisseur[index]);
+                break;
+            }
+        }
+        std::cout << "Objet récupéré." << std::endl;
+    } else {
+        while (hasFreeSlot()) {
+            std::cout << "Voulez-vous récupérer un objet ? (y/n): ";
+            char choix;
+            std::cin >> choix;
+            if (choix != 'y' && choix != 'Y') break;
+            std::cout << "Entrez l'indice du slot à récupérer : ";
+            int index;
+            std::cin >> index;
+            if (index < 0 || index >= static_cast<int>(invFournisseur.size())) {
+                std::cout << "Indice invalide." << std::endl;
+                continue;
+            }
+            if (!invFournisseur[index]) {
+                std::cout << "Ce slot est vide." << std::endl;
+                continue;
+            }
+            for (auto& slot : invReceveur) {
+                if (!slot) {
+                    slot = std::move(invFournisseur[index]);
+                    break;
+                }
+            }
+            std::cout << "Objet récupéré." << std::endl;
+        }
+        if (!hasFreeSlot())
+            std::cout << "Votre inventaire est maintenant plein." << std::endl;
+    }
+}
 #endif
