@@ -1,0 +1,5 @@
+<map id="Arme" name="Arme">
+<area shape="rect" id="Node000001" title="Classe représentant un objet de type Arme." alt="" coords="5,80,58,107"/>
+<area shape="rect" id="Node000002" href="$class_objet.html" title="Classe représentant un objet." alt="" coords="5,5,58,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,48,34,80,29,80,29,48"/>
+</map>

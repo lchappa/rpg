@@ -1,0 +1,9 @@
+<map id="Objet" name="Objet">
+<area shape="rect" id="Node000001" title="Classe représentant un objet." alt="" coords="87,5,139,32"/>
+<area shape="rect" id="Node000002" href="$class_arme.html" title="Classe représentant un objet de type Arme." alt="" coords="5,80,58,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,44,47,82,44,78,86,41"/>
+<area shape="rect" id="Node000003" href="$class_armure.html" title="Classe représentant un objet de type Armure." alt="" coords="81,80,144,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,48,116,80,110,80,110,48"/>
+<area shape="rect" id="Node000004" href="$class_potion.html" title="Classe représentant un objet de type Potion." alt="" coords="169,80,227,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,40,185,78,182,82,137,44"/>
+</map>

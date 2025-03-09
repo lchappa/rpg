@@ -1,0 +1,42 @@
+<map id="objet.h" name="objet.h">
+<area shape="rect" id="Node000001" title="Déclaration de la classe Objet." alt="" coords="244,5,304,32"/>
+<area shape="rect" id="Node000002" href="$arme_8h.html" title="Déclaration de la classe Arme." alt="" coords="86,80,147,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,41,145,82,143,77,231,36"/>
+<area shape="rect" id="Node000004" href="$personnage_8h.html" title="Déclaration de la classe Personnage." alt="" coords="272,155,371,181"/>
+<area shape="poly" id="edge22_Node000001_Node000004" title=" " alt="" coords="285,46,320,153,315,155,280,48"/>
+<area shape="rect" id="Node000012" href="$armure_8h.html" title="Déclaration de la classe Armure." alt="" coords="366,80,438,107"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="310,38,381,77,378,82,308,42"/>
+<area shape="rect" id="Node000013" href="$potion_8h.html" title="Déclaration de la classe Potion." alt="" coords="205,80,273,107"/>
+<area shape="poly" id="edge23_Node000001_Node000013" title=" " alt="" coords="263,47,247,81,243,78,259,45"/>
+<area shape="rect" id="Node000003" href="$arme_8cpp.html" title="Implémentation de la classe Arme." alt="" coords="5,379,81,405"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,122,96,156,81,192,68,230,53,314,46,379,41,378,48,314,63,229,76,191,91,154,104,120"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="162,108,287,152,285,157,161,113"/>
+<area shape="rect" id="Node000007" href="$utils_8h.html" title="Librairie contenant des fonctions utilitaires." alt="" coords="258,304,314,331"/>
+<area shape="poly" id="edge17_Node000002_Node000007" title=" " alt="" coords="108,122,102,151,102,166,107,180,132,209,176,243,265,301,263,306,173,248,129,213,102,183,97,167,96,151,102,121"/>
+<area shape="rect" id="Node000005" href="$allie_8h.html" title="Déclaration de la classe Allie." alt="" coords="78,229,133,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,189,135,234,133,229,269,184"/>
+<area shape="poly" id="edge16_Node000004_Node000007" title=" " alt="" coords="318,197,291,304,286,303,312,196"/>
+<area shape="rect" id="Node000010" href="$personnage_8cpp.html" title="Implémentation de la classe Personnage." alt="" coords="356,379,469,405"/>
+<area shape="poly" id="edge15_Node000004_Node000010" title=" " alt="" coords="388,179,429,197,448,210,463,228,471,248,474,269,471,291,464,313,445,351,425,380,420,377,440,349,459,311,466,290,468,269,466,249,458,231,444,214,426,201,385,183"/>
+<area shape="rect" id="Node000011" href="$ennemi_8h.html" title="Déclaration de la classe Ennemi." alt="" coords="374,229,448,256"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="351,189,397,227,394,231,347,194"/>
+<area shape="rect" id="Node000006" href="$allie_8cpp.html" title="Implémentation de la classe Allie." alt="" coords="134,379,203,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="119,269,165,377,161,379,114,271"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="149,258,258,302,256,307,147,263"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="243,334,82,382,81,377,242,329"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="254,341,190,380,188,376,251,337"/>
+<area shape="rect" id="Node000008" href="$armure_8cpp.html" title="Implémentation de la classe Armure." alt="" coords="493,379,580,405"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="330,329,494,376,492,381,328,334"/>
+<area shape="rect" id="Node000009" href="$ennemi_8cpp.html" title="Implémentation de la classe Ennemi." alt="" coords="242,379,330,405"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="288,346,288,378,283,378,283,346"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="322,336,391,376,389,380,319,341"/>
+<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="378,266,309,306,306,301,375,262"/>
+<area shape="poly" id="edge13_Node000011_Node000009" title=" " alt="" coords="392,270,298,380,294,376,388,266"/>
+<area shape="poly" id="edge20_Node000012_Node000004" title=" " alt="" coords="378,119,337,156,334,152,375,115"/>
+<area shape="poly" id="edge21_Node000012_Node000007" title=" " alt="" coords="401,122,396,152,385,182,365,220,342,254,300,305,296,302,338,251,361,217,381,180,390,150,396,121"/>
+<area shape="poly" id="edge19_Node000012_Node000008" title=" " alt="" coords="422,118,454,168,487,228,518,313,536,377,531,379,513,314,482,230,449,171,417,121"/>
+<area shape="poly" id="edge24_Node000013_Node000004" title=" " alt="" coords="267,115,309,152,306,156,263,119"/>
+<area shape="poly" id="edge26_Node000013_Node000007" title=" " alt="" coords="247,121,286,303,280,304,242,123"/>
+<area shape="rect" id="Node000014" href="$potion_8cpp.html" title="Implémentation de la classe Potion." alt="" coords="116,155,197,181"/>
+<area shape="poly" id="edge25_Node000013_Node000014" title=" " alt="" coords="215,119,172,156,169,152,211,115"/>
+</map>

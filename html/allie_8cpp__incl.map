@@ -1,0 +1,47 @@
+<map id="allie.cpp" name="allie.cpp">
+<area shape="rect" id="Node000001" title="Implémentation de la classe Allie." alt="" coords="227,5,296,32"/>
+<area shape="rect" id="Node000002" href="$allie_8h.html" title="Déclaration de la classe Allie." alt="" coords="91,155,146,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,34,143,145,139,142,247,31"/>
+<area shape="rect" id="Node000012" href="$utils_8h.html" title="Librairie contenant des fonctions utilitaires." alt="" coords="329,80,386,107"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="280,30,330,68,327,73,276,35"/>
+<area shape="rect" id="Node000003" href="$personnage_8h.html" title="Déclaration de la classe Personnage." alt="" coords="241,229,340,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,179,248,221,246,225,146,184"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="315,453,368,480"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="296,256,338,438,333,439,291,257"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="402,304,452,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="316,254,391,294,388,299,313,259"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="566,304,634,331"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="341,253,551,302,550,307,340,258"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="702,304,767,331"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="341,249,688,306,687,311,340,255"/>
+<area shape="rect" id="Node000008" href="$objet_8h.html" title="Déclaration de la classe Objet." alt="" coords="190,379,250,405"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="291,257,283,291,268,332,243,368,239,365,263,329,278,290,286,256"/>
+<area shape="rect" id="Node000009" href="$arme_8h.html" title="Déclaration de la classe Arme." alt="" coords="5,304,67,331"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="247,259,82,306,80,301,246,254"/>
+<area shape="rect" id="Node000010" href="$armure_8h.html" title="Déclaration de la classe Armure." alt="" coords="90,304,163,331"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="263,259,170,300,168,295,261,254"/>
+<area shape="rect" id="Node000011" href="$potion_8h.html" title="Déclaration de la classe Potion." alt="" coords="186,304,254,331"/>
+<area shape="poly" id="edge13_Node000003_Node000011" title=" " alt="" coords="280,258,245,295,241,291,276,255"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="242,404,308,443,306,447,240,408"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="68,328,176,371,174,376,66,333"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="145,329,194,367,190,371,141,333"/>
+<area shape="poly" id="edge14_Node000011_Node000008" title=" " alt="" coords="223,331,223,363,217,363,217,331"/>
+<area shape="poly" id="edge26_Node000012_Node000002" title=" " alt="" coords="329,106,162,156,161,151,328,101"/>
+<area shape="poly" id="edge23_Node000012_Node000003" title=" " alt="" coords="330,106,293,125,275,139,262,156,258,170,260,186,274,216,269,218,255,187,253,170,258,153,272,135,290,121,327,101"/>
+<area shape="poly" id="edge20_Node000012_Node000004" title=" " alt="" coords="386,92,450,93,536,101,633,120,681,134,726,152,765,168,798,183,811,193,821,205,827,221,829,241,829,319,825,336,814,353,797,367,775,381,719,404,650,423,503,450,384,464,383,459,502,445,649,418,717,399,773,376,794,363,810,349,821,334,824,318,824,241,822,222,816,208,807,196,795,187,763,173,724,157,679,139,631,125,535,107,449,99,386,97"/>
+<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="386,93,451,99,531,109,604,126,633,138,651,153,660,167,664,181,664,194,659,207,640,230,611,251,538,285,468,308,466,303,536,280,609,247,637,227,655,204,659,193,659,181,655,169,647,156,630,143,603,131,530,114,450,104,386,99"/>
+<area shape="poly" id="edge18_Node000012_Node000006" title=" " alt="" coords="386,93,456,97,543,107,624,125,655,137,675,153,685,171,688,190,685,209,677,229,654,265,627,295,623,291,649,262,672,226,680,208,683,190,680,172,671,156,652,142,622,130,542,112,456,103,386,98"/>
+<area shape="poly" id="edge16_Node000012_Node000007" title=" " alt="" coords="386,93,460,98,553,108,641,125,675,138,699,153,722,184,734,221,739,257,739,289,734,289,734,258,729,222,717,186,696,157,673,142,639,131,552,113,459,103,386,98"/>
+<area shape="poly" id="edge27_Node000012_Node000009" title=" " alt="" coords="329,99,264,105,184,116,110,133,82,144,63,157,44,187,35,222,33,258,34,289,29,289,27,258,30,221,39,185,59,153,79,139,108,127,183,110,264,99,329,94"/>
+<area shape="poly" id="edge28_Node000012_Node000010" title=" " alt="" coords="329,99,267,105,192,115,123,132,97,144,81,156,72,172,68,188,74,225,90,260,109,290,105,293,85,263,69,226,63,188,67,170,77,153,94,139,121,127,191,110,266,99,328,94"/>
+<area shape="poly" id="edge29_Node000012_Node000011" title=" " alt="" coords="330,106,289,125,270,139,253,156,235,188,225,223,221,258,221,288,215,288,216,258,220,222,230,186,249,153,266,135,287,121,328,101"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="371,155,442,181"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="368,106,392,140,387,143,364,109"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="466,155,547,181"/>
+<area shape="poly" id="edge21_Node000012_Node000014" title=" " alt="" coords="385,105,468,145,465,150,382,110"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="571,155,637,181"/>
+<area shape="poly" id="edge22_Node000012_Node000015" title=" " alt="" coords="387,101,557,150,555,155,385,106"/>
+<area shape="rect" id="Node000016" href="$ennemi_8h.html" title="Déclaration de la classe Ennemi." alt="" coords="272,155,346,181"/>
+<area shape="poly" id="edge24_Node000012_Node000016" title=" " alt="" coords="351,109,328,143,324,140,347,106"/>
+<area shape="poly" id="edge25_Node000016_Node000003" title=" " alt="" coords="309,183,300,215,295,213,304,181"/>
+</map>

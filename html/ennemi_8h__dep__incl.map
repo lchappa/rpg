@@ -1,0 +1,16 @@
+<map id="ennemi.h" name="ennemi.h">
+<area shape="rect" id="Node000001" title="Déclaration de la classe Ennemi." alt="" coords="111,5,185,32"/>
+<area shape="rect" id="Node000002" href="$ennemi_8cpp.html" title="Implémentation de la classe Ennemi." alt="" coords="5,155,94,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,46,60,156,56,153,129,43"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html" title="Librairie contenant des fonctions utilitaires." alt="" coords="172,80,228,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,43,193,78,189,81,164,46"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="162,116,77,156,75,152,159,111"/>
+<area shape="rect" id="Node000004" href="$allie_8cpp.html" title="Implémentation de la classe Allie." alt="" coords="118,155,187,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="186,121,163,156,158,153,181,118"/>
+<area shape="rect" id="Node000005" href="$arme_8cpp.html" title="Implémentation de la classe Arme." alt="" coords="210,155,286,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="219,118,242,153,238,156,215,121"/>
+<area shape="rect" id="Node000006" href="$armure_8cpp.html" title="Implémentation de la classe Armure." alt="" coords="310,155,397,181"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="242,111,328,152,325,156,240,116"/>
+<area shape="rect" id="Node000007" href="$personnage_8cpp.html" title="Implémentation de la classe Personnage." alt="" coords="421,155,534,181"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="244,103,430,152,428,157,243,108"/>
+</map>
